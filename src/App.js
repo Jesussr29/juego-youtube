@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Inicio from "./Inicio";
+import Juego from "./Juego";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [inicio, setInicio] = useState(null);
+    const [fin, setFin] = useState(null);
+
+    function empezar(i, f) {
+        setInicio(i);
+        setFin(f);
+    }
+
+    function reiniciar() {
+        setInicio(null);
+        setFin(null);
+    }
+
+    return (
+        <div>
+
+            {!inicio ? (
+                <Inicio empezar={empezar} />
+            ) : (
+                <Juego
+                    inicio={inicio}
+                    fin={fin}
+                    reiniciar={reiniciar}
+                />
+            )}
+
+        </div>
+    );
 }
 
 export default App;
