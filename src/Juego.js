@@ -24,7 +24,9 @@ function Juego({ inicio, fin }) {
 
         if (!fin) return;
 
-        fetch("/juego-youtube/api/video/" + fin)
+        // En servidor fetch("/juego-youtube/api/video/" + fin)
+        // En GitHub Pages fetch("https://jesusweb.ddns.net/juego-youtube/api/video/" + fin)
+        fetch("https://jesusweb.ddns.net/juego-youtube/api/video/" + fin)
             .then(res => res.json())
             .then(data => {
 
@@ -65,7 +67,9 @@ function Juego({ inicio, fin }) {
 
         let activo = true;
 
-        fetch("/juego-youtube/api/recomendados/" + videoActual)
+        // En servidor fetch("/juego-youtube/api/recomendados/" + videoActual)
+        // En GitHub Pages fetch("https://jesusweb.ddns.net/juego-youtube/api/recomendados/" + videoActual)
+        fetch("https://jesusweb.ddns.net/juego-youtube/api/recomendados/" + videoActual)
             .then(res => res.json())
             .then(data => {
 
