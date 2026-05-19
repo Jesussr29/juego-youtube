@@ -6,14 +6,14 @@ const app = express();
 app.use(cors());
 
 // 🔑 API KEY
-//betico150
-//const API_KEY = "AIzaSyAeH7Yajroax7pMfjfjxDPtyFOIysmBEgw";
+//xxxxxxxxxxxxxx
+//const API_KEY = "xxxxxxxxxxxxxx";
 
-//betico152
-//const API_KEY = "AIzaSyDgbluySy2sZn-fRuciGiRwzggyN-VdpiE";
+//xxxxxxxxxxxxxx
+//const API_KEY = "xxxxxxxxxxxxxx";
 
-//peliculas
-const API_KEY = "AIzaSyBK6pCMyl3XXMXZToGqXwU-uZkuJLwQAks";
+//xxxxxxxxxxxxxx
+const API_KEY = "xxxxxxxxxxxxxx";
 
 // 📦 DB
 const FILE = "./videos.json";
